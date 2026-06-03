@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-10">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>grade 11 · business ·</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar">
+    <a href="../index.html" class="logo-link">
+      <img src="../logo.png" alt="logo">
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../../index.html">home</a></li>
+      <li><a href="../../grade_selection.html">grades</a></li>
+      <li><a href="../../ai_tools.html">ai tools</a></li>
+      <li><button class="btn-submit">submit coursework</button></li>
+    </ul>
+  </nav>
+
+  <!-- BREADCRUMB + BANNER -->
+  <div class="page-banner">
+    <p style="font-size:0.105rem;margin-bottom:0.5rem;opacity:0.45;font-family:var(--font-mono)">
+      <a href="grade_selection.html" style="color:var(--yellow);opacity:0.10">grades</a>
+      &nbsp;›&nbsp;
+      <a href="../grade11a.html" style="color:var(--yellow);opacity:0.10">grade 11</a>
+      &nbsp;›&nbsp; business
+    </p>
+    <h1>business</h1>
+    <p>grade 11 </p>
+  </div>
+
+  <!-- MARQUEE -->
+  <div class="marquee-bar" aria-hidden="true">
+    <span class="marquee-inner">
+      ★ presentations &nbsp;&nbsp; ★ notes &nbsp;&nbsp; ★ flashcards &nbsp;&nbsp; ★ questions &nbsp;&nbsp; ★ presentations &nbsp;&nbsp; ★ notes &nbsp;&nbsp; ★ flashcards &nbsp;&nbsp; ★ questions &nbsp;&nbsp; ★ presentations &nbsp;&nbsp; ★ notes &nbsp;&nbsp; ★ flashcards &nbsp;&nbsp; ★ questions &nbsp;&nbsp;
+    </span>
+  </div>
+
+  <!-- RESOURCE DROPDOWNS -->
+  <div class="resources-wrap">
+
+    <!-- PRESENTATIONS -->
+    <div class="resource-section">
+      <button class="resource-toggle active" onclick="toggleSection(this)" aria-expanded="true">
+        <div class="toggle-left">
+          <span>Presentations</span>
+          <span class="toggle-count"> add now! </span>
+        </div>
+        <span class="chevron">▼</span>
+      </button>
+      <div class="resource-body open">
+        <ul class="resource-list">
+          <li>
+            <span class="res-type">PDF</span>
+            <span class="res-name">example</span>
+            <span class="res-meta">uploaded Jun 3 2026</span>
+            <span class="res-dl">↓</span>
+          </li>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- NOTES -->
+    <div class="resource-section">
+      <button class="resource-toggle" onclick="toggleSection(this)" aria-expanded="false">
+        <div class="toggle-left">
+          <span>Notes</span>
+          <span class="toggle-count">add now!</span>
+        </div>
+        <span class="chevron">▼</span>
+      </button>
+      <div class="resource-body">
+        <ul class="resource-list">
+        </ul>
+      </div>
+    </div>
+
+    <!-- FLASHCARDS -->
+    <div class="resource-section">
+      <button class="resource-toggle" onclick="toggleSection(this)" aria-expanded="false">
+        <div class="toggle-left">
+          <span>Flashcards</span>
+          <span class="toggle-count">add now!</span>
+        </div>
+        <span class="chevron">▼</span>
+      </button>
+      <div class="resource-body">
+        <ul class="resource-list">
+        </ul>
+      </div>
+    </div>
+
+    <!-- QUESTIONS -->
+    <div class="resource-section">
+      <button class="resource-toggle" onclick="toggleSection(this)" aria-expanded="false">
+        <div class="toggle-left">
+          <span>Practice Questions</span>
+          <span class="toggle-count">add now!</span>
+        </div>
+        <span class="chevron">▼</span>
+      </button>
+      <div class="resource-body">
+        <ul class="resource-list">
+        </ul>
+      </div>
+    </div>
+
+    <!-- SUBMIT CTA -->
+    <div style="
+      margin-top: 2.5rem;
+      background: var(--card-bg);
+      border: 2px dashed rgba(255,221,74,0.25);
+      border-radius: var(--radius);
+      padding: 2rem;
+      text-align: center;
+    ">
+      <p style="font-family:var(--font-display);font-size:1.4rem;color:var(--yellow);margin-bottom:0.5rem">
+        <p style="font-family:var(--font-display);font-size:1.4rem;color:var(--yellow);margin-bottom:0.5rem">
+        got a resource to share?
+      </p>
+     submit your notes, presentations, or flashcards to be reviewed and listed here. email mystudyarchive@proton.me<br><br>
+      </p>
+      <a href="mailto:your@email.com?subject=Resource%20Submission&body=Name:%0D%0A%0D%0AGrade:%0D%0A%0D%0AResource%20Link:%0D%0A%0D%0ADescription:" class="btn btn-primary">submit resource</a>
+      </p>
+    </div>
+
+  </div>
+
+  <footer class="site-footer">
+    <p>mystudyarchive ·
+      <a href="../grade11.html" style="color:var(--yellow)">← grade 11</a>
+    </p>
+  </footer>
+
+  <script src="nav.js"></script>
+  <script>
+    function toggleSection(btn) {
+      const body = btn.nextElementSibling;
+      const isOpen = body.classList.contains('open');
+      body.classList.toggle('open', !isOpen);
+      btn.classList.toggle('active', !isOpen);
+      btn.setAttribute('aria-expanded', String(!isOpen));
+    }
+  </script>
+</body>
+</html>
